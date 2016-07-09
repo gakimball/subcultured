@@ -1,0 +1,68 @@
+.header {
+  height: 88px;
+  background: #fff;
+  box-shadow: 0 2px 10px rgba(#000, 0.25);
+  overflow: hidden;
+  clear: both;
+  margin-bottom: 1rem;
+}
+
+  .header-left {
+    float: left;
+  }
+
+  .header-right {
+    float: right;
+  }
+
+.logo {
+  display: inline-block;
+  vertical-align: middle;
+  border: 0;
+  color: #000;
+  margin-top: 14px;
+  margin-left: 14px;
+  margin-right: 28px;
+}
+
+  .logo-image {
+    width: 60px;
+    height: 60px;
+    vertical-align: middle;
+    margin-right: 12px;
+  }
+
+  .logo-text {
+    font-size: 24px;
+    font-weight: bold;
+    vertical-align: middle;
+    position: relative;
+    top: 2px;
+  }
+
+.nav {
+  display: inline-block;
+}
+
+  .nav-item {
+    display: inline-block;
+    font-size: 20px;
+    color: #f00;
+    margin-right: 28px;
+    font-weight: bold;
+    border: 0;
+    position: relative;
+    top: 12px;
+  }
+
+.subscribe-button {
+  height: 88px;
+  background: linear-gradient(to bottom, #ff00e5, #f00);
+  color: #fff;
+  font-size: 20px;
+  display: block;
+  line-height: 88px;
+  font-weight: bold;
+  padding-left: 38px;
+  padding-right: 38px;
+}
