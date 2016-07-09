@@ -1,0 +1,11 @@
+.link {
+  font-size: 18px;
+  border: 0;
+  font-weight: bold;
+  display: block;
+  line-height: 2;
+
+  &:hover {
+    color: #900;
+  }
+}

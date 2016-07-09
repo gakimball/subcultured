@@ -1,0 +1,17 @@
+.bio {
+  @include media-object-container;
+}
+
+.bio-image,
+.bio-text {
+  @include media-object-section;
+}
+
+.bio-image {
+  margin-right: 10px;
+
+  img {
+    width: 80px;
+    height: 80px;
+  }
+}
