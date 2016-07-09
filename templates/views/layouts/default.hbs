@@ -129,43 +129,24 @@
 		</div>
 		{{!-- /Main container --}}
 
-		<div id="body">
-			<!--
-				Flash messages allow you to display once-off status messages to users, e.g. form
-				validation errors, success messages, etc
-			-->
-			{{#if messages}}
-			<div id="flash-messages" class="container">
-				{{#if messages.info}}
-				<div class="alert alert-info">
-						{{{flashMessages messages.info}}}
-				</div>
-				{{/if}}
-				{{#if messages.success}}
-				<div class="alert alert-success">
-						{{{flashMessages messages.success}}}
-				</div>
-				{{/if}}
-				{{#if messages.warning}}
-				<div class="alert alert-warning">
-						{{{flashMessages messages.warning}}}
-				</div>
-				{{/if}}
-				{{#if messages.error}}
-				<div class="alert alert-danger">
-						{{{flashMessages messages.error}}}
-				</div>
-				{{/if}}
+		{{!-- Footer --}}
+		<footer class="footer">
+			<div class="footer-inner">
+				<p class="footer-tagline"><a href="/">Subcultured</a> is a podcast.</p>
+				<nav class="footer-links">
+					<a href="/" class="footer-links-item">Episodes</a>
+					<a href="/" class="footer-links-item">Blog</a>
+					<a href="/" class="footer-links-item">iTunes</a>
+					<a href="/" class="footer-links-item">Spotify</a>
+					<a href="/" class="footer-links-item">RSS</a>
+				</nav>
+				<nav class="footer-links">
+					<a href="/" class="footer-links-item">hi@subcultured.show</a>
+				</nav>
 			</div>
-			{{/if}}
-			<!-- The content block should contain the body of your template's content-->
-			{{{body}}}
-		</div>
-		<div class="container">
-			<div id="footer">
-				<p>Powered by <a href="http://keystonejs.com" target="_blank">KeystoneJS</a>.</p>
-			</div>
-		</div>
+		</footer>
+		{{!-- /Footer --}}
+
 		{{!--
 			//- jQuery 1.11.3 is included by default, and required by both Bootstrap
 			//- and the KeystoneJS Content Editor. If you are not targeting IE8,
