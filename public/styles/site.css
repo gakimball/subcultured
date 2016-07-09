@@ -542,14 +542,18 @@ blockquote {
     width: 80px;
     height: 80px; }
 
-.link {
+.link, .big-link {
   font-size: 18px;
   border: 0;
   font-weight: bold;
   display: block;
   line-height: 2; }
-  .link:hover {
+  .link:hover, .big-link:hover {
     color: #900; }
+
+.big-link {
+  text-align: center;
+  font-size: 22px; }
 
 .episode {
   margin-bottom: 2rem; }

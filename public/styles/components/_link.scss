@@ -9,3 +9,9 @@
     color: #900;
   }
 }
+
+.big-link {
+  @extend .link;
+  text-align: center;
+  font-size: 22px;
+}

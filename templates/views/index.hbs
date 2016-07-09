@@ -1,21 +1,84 @@
-{{!< default}}
-<div class="container">
-	<div class="jumbotron"><img src="/images/logo.svg" width="160">
-		<h1>Welcome</h1>
-		<p>This is your new <a href='http://keystonejs.com' target='_blank'>KeystoneJS</a> website.</p>
-		<p>
-			It includes the latest versions of
-			<a href='http://getbootstrap.com/' target='_blank'>Bootstrap</a>
-			and <a href='http://www.jquery.com/' target='_blank'>jQuery</a>.
-		</p>
-		<p>Visit the <a href='http://keystonejs.com/guide' target='_blank'>Getting Started</a> guide to learn how to customise it.</p>
-		<hr>
-		<p>We have created a default Admin user for you with the email <strong>geoff@geoffkimball.com</strong> and the password <strong>admin</strong>.</p>
-		<p><a href="/keystone/signin" style="margin-right: 10px" class="btn btn-lg btn-primary">Sign in</a> to use the Admin UI.</p>
-		<hr>
-		<p>
-			Remember to <a href='https://github.com/keystonejs/keystone' target='_blank'>Star KeystoneJS on GitHub</a> and
-			<a href='https://twitter.com/keystonejs' target='_blank'>follow @keystonejs</a> on twitter for updates.
-		</p>
+{{#if data.episodes.length}}
+	{{#with data.episodes.[0]}}
+		<div class="bigplayer">
+			<p class="bigplayer-quote">
+				{{ content.quote }}
+			</p>
+			<hr>
+		</div>
+	{{/with}}
+{{/if}}
+
+{{!-- Main container --}}
+<div class="main">
+	{{!-- Content --}}
+	<div class="main-content">
+		<h2>Episodes</h2>
+
+		{{ debug }}
+
+		{{#if data.episodes.length}}
+			{{#each data.episodes}}
+				<section class="episode">
+					<h3 class="episode-title"><a href="#">{{ title }}</a></h3>
+					<div class="episode-body">
+						<div class="episode-body-thumbnail">
+							<img src="{{ image.secure_url }}" alt="Sonic Passion">
+						</div>
+						<div class="episode-body-info">
+							<p>{{ content.blurb }}</p>
+
+							<p>{{ content.credits }}</p>
+
+							<blockquote>"{{ content.quote }}"</blockquote>
+						</div>
+					</div>
+				</section>
+			{{/each}}
+		{{else}}
+			<p>No episodes have been published yet.</p>
+		{{/if}}
+
+		<a href="/episodes" class="big-link">View All Episodes &rarr;</a>
 	</div>
+	{{!-- /Content --}}
+
+	{{!-- Sidebar --}}
+	<div class="main-sidebar">
+		<section>
+			<h2>About</h2>
+			<p>Somewhere on the Internet, a group of writers have produced hundreds of stories about a boring man and his cat. Elsewhere, a devoted Buffy the Vampire Slayer fan maintains a message board with a history of 40,000 posts—all written by her.</p>
+
+			<p>Online summer camps; dwarven kingdoms; elevator enthusiasts; the Internet is a big place. Let us be your guides through the interesting, the eccentric, and occasionally, the pornographic. Subculture is an exploration of niche Internet communities and the human behaviors that drive them.</p>
+
+			<div class="bio">
+				<div class="bio-image">
+					<img src="//placehold.it/80x80" alt="Geoff Kimball">
+				</div>
+				<div class="bio-text">
+					<p><strong>Geoff Kimball</strong> is a product designer and web developer in San Jose, California.</p>
+				</div>
+			</div>
+
+			<div class="bio">
+				<div class="bio-image">
+					<img src="//placehold.it/80x80" alt="Drew Siner">
+				</div>
+				<div class="bio-text">
+					<p><strong>Drew Siner</strong> is a video and audio producer in Bloomington, Indiana.</p>
+				</div>
+			</div>
+		</section>
+
+		<section>
+			<h2>Subscribe</h2>
+
+			<a href="" class="link">iTunes</a>
+			<a href="" class="link">Spotify</a>
+			<a href="" class="link">Soundcloud</a>
+			<a href="" class="link">RSS</a>
+		</section>
+	</div>
+	{{!-- /Sidebar --}}
 </div>
+{{!-- /Main container --}}
