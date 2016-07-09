@@ -336,6 +336,7 @@ module.exports = function () {
 	//  `{{ markdown 'This is *Markdown*.' }}`
 
 	_helpers.markdown = function (text) {
+		if (typeof text === 'undefined') text = '';
 		return new hbs.SafeString(marked(text));
 	}
 
