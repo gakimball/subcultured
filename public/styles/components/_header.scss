@@ -22,7 +22,13 @@
   color: #000;
   margin-top: 14px;
   margin-left: 14px;
-  margin-right: 28px;
+  margin-right: 40px;
+
+  &:hover {
+    .logo-text {
+      border-bottom: 3px solid #000;
+    }
+  }
 }
 
   .logo-image {
@@ -53,6 +59,12 @@
     border: 0;
     position: relative;
     top: 12px;
+    border-bottom: 3px solid #fff;
+
+    &:hover,
+    &.is-current {
+      border-bottom-color: #f00;
+    }
   }
 
 .subscribe-button {
@@ -65,4 +77,8 @@
   font-weight: bold;
   padding-left: 38px;
   padding-right: 38px;
+
+  &:hover {
+    opacity: 0.75;
+  }
 }

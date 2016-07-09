@@ -16,4 +16,9 @@
   @include breakpoint(large) {
     @include grid-col-size(4);
   }
+
+  // Sidebar sections
+  > section {
+    margin-bottom: 3rem;
+  }
 }

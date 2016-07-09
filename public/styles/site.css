@@ -457,6 +457,8 @@ blockquote {
   @media screen and (min-width: 64em) {
     .main-sidebar {
       width: 33.33333%; } }
+  .main-sidebar > section {
+    margin-bottom: 3rem; }
 
 .header {
   height: 88px;
@@ -479,7 +481,9 @@ blockquote {
   color: #000;
   margin-top: 14px;
   margin-left: 14px;
-  margin-right: 28px; }
+  margin-right: 40px; }
+  .logo:hover .logo-text {
+    border-bottom: 3px solid #000; }
 
 .logo-image {
   width: 60px;
@@ -505,7 +509,10 @@ blockquote {
   font-weight: bold;
   border: 0;
   position: relative;
-  top: 12px; }
+  top: 12px;
+  border-bottom: 3px solid #fff; }
+  .nav-item:hover, .nav-item.is-current {
+    border-bottom-color: #f00; }
 
 .subscribe-button {
   height: 88px;
@@ -517,6 +524,8 @@ blockquote {
   font-weight: bold;
   padding-left: 38px;
   padding-right: 38px; }
+  .subscribe-button:hover {
+    opacity: 0.75; }
 
 .bio {
   margin-bottom: 1rem;
@@ -542,6 +551,16 @@ blockquote {
     width: 80px;
     height: 80px; }
 
+.bio-text {
+  font-size: 14px;
+  vertical-align: middle; }
+  .bio-text a {
+    font-weight: bold;
+    color: black;
+    border: 0; }
+    .bio-text a:hover {
+      border-bottom: 1px solid #000; }
+
 .link, .big-link {
   font-size: 18px;
   border: 0;
@@ -563,8 +582,7 @@ blockquote {
   color: #f00;
   line-height: 1.9;
   border-bottom: 1px solid #f00;
-  margin-bottom: 26px;
-  font-weight: normal; }
+  margin-bottom: 26px; }
   .episode-title a {
     border: 0; }
 

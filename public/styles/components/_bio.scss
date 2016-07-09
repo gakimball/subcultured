@@ -15,3 +15,18 @@
     height: 80px;
   }
 }
+
+.bio-text {
+  font-size: 14px;
+  vertical-align: middle;
+
+  a {
+    font-weight: bold;
+    color: black;
+    border: 0;
+
+    &:hover {
+      border-bottom: 1px solid #000;
+    }
+  }
+}
