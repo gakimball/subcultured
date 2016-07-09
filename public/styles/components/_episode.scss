@@ -1,0 +1,38 @@
+.episode {
+  margin-bottom: 2rem;
+}
+
+.episode-title {
+  font-size: 20px;
+  color: #f00;
+  line-height: 1.9;
+  border-bottom: 1px solid #f00;
+  margin-bottom: 26px;
+  font-weight: normal;
+
+  a {
+    border: 0;
+  }
+}
+
+.episode-body {
+  @include media-object-container;
+}
+
+.episode-body-thumbnail {
+  @include media-object-section;
+  margin-right: 16px;
+
+  img {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+.episode-body-info {
+  @include media-object-section;
+
+  blockquote {
+    font-style: italic;
+  }
+}

@@ -1,5 +1,12 @@
 body {
   -webkit-font-smoothing: antialiased;
+  background: #fff url('../images/background.png') repeat;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 a {
@@ -10,5 +17,12 @@ a {
 
 p,
 li {
+  margin-top: 0;
+  line-height: 1.5;
+}
+
+blockquote {
+  margin: 0;
+  margin-bottom: 1.5em;
   line-height: 1.5;
 }
