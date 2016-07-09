@@ -11,8 +11,8 @@ var handlebars = require('express-handlebars');
 // and documentation.
 
 keystone.init({
-	'name': 'subculture',
-	'brand': 'subculture',
+	'name': 'subcultured',
+	'brand': 'subcultured',
 
 	'sass': 'public',
 	'static': 'public',
@@ -57,8 +57,9 @@ keystone.Email.defaults.templateEngine = require('handlebars');
 
 // Configure the navigation bar in Keystone's Admin UI
 keystone.set('nav', {
-	posts: ['posts', 'post-categories'],
-	users: 'users',
+	podcast: 'episodes',
+	blog: ['posts', 'post-categories'],
+	users: 'users'
 });
 
 // Start Keystone to connect to your database and initialise the web server
