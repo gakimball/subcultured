@@ -584,7 +584,8 @@ blockquote {
     margin-bottom: 0; }
   .episode-body-thumbnail img {
     width: 150px;
-    height: 150px; }
+    height: 150px;
+    border: 1px solid #999; }
 
 .episode-body-info {
   display: table-cell;
@@ -595,8 +596,14 @@ blockquote {
     padding-left: 1rem; }
   .episode-body-info > :last-child {
     margin-bottom: 0; }
-  .episode-body-info blockquote {
-    font-style: italic; }
+
+.episode-body-info-quote {
+  font-style: italic; }
+  .episode-body-info-quote p::before,
+  .episode-body-info-quote p::after {
+    content: '"'; }
+  .episode-body-info-quote strong {
+    font-weight: normal; }
 
 .footer {
   background: #333;
@@ -646,9 +653,10 @@ blockquote {
 
 .bigplayer-quote {
   font-size: 60px;
-  line-height: 71px;
   font-weight: 300;
   position: relative; }
+  .bigplayer-quote p {
+    line-height: 71px; }
   .bigplayer-quote::before {
     content: '';
     display: block;

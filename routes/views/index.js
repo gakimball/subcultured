@@ -19,7 +19,6 @@ exports = module.exports = function (req, res) {
 			.sort('-publishedDate');
 
 		q.exec(function(err, results) {
-			console.log(results[0]);
 			locals.data.episodes = results;
 			next(err);
 		})

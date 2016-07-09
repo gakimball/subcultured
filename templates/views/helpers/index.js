@@ -3,6 +3,7 @@ var _ = require('underscore');
 var hbs = require('handlebars');
 var keystone = require('keystone');
 var cloudinary = require('cloudinary');
+var marked = require('marked');
 
 // Collection of templates to interpolate
 var linkTemplate = _.template('<a href="<%= url %>"><%= text %></a>');
@@ -325,6 +326,18 @@ module.exports = function () {
 	_helpers.underscoreFormat = function (obj, underscoreMethod) {
 		return obj._[underscoreMethod].format();
 	};
+
+	//  ### Markdown helper
+	//  Formats a Markdown string as HTML.
+	//
+	//  @text: Markdown text to transform.
+	//
+	//  *Usage example:*
+	//  `{{ markdown 'This is *Markdown*.' }}`
+
+	_helpers.markdown = function (text) {
+		return new hbs.SafeString(marked(text));
+	}
 
 	return _helpers;
 };

@@ -11,9 +11,12 @@
 
 .bigplayer-quote {
   font-size: 60px;
-  line-height: 71px;
   font-weight: 300;
   position: relative;
+
+  p {
+    line-height: 71px;
+  }
 
   // Quote image
   &::before {

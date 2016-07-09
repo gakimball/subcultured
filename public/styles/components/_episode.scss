@@ -26,13 +26,23 @@
   img {
     width: 150px;
     height: 150px;
+    border: 1px solid #999;
   }
 }
 
 .episode-body-info {
   @include media-object-section;
+}
 
-  blockquote {
-    font-style: italic;
+.episode-body-info-quote {
+  font-style: italic;
+
+  p::before,
+  p::after {
+    content: '"';
+  }
+
+  strong {
+    font-weight: normal;
   }
 }
