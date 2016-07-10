@@ -1,0 +1,15 @@
+<section class="episode">
+  <h3 class="episode-title"><a href="#">{{ title }}</a></h3>
+  <div class="episode-body">
+    <div class="episode-body-thumbnail">
+      <img src="{{ image.secure_url }}" alt="Sonic Passion">
+    </div>
+    <div class="episode-body-info">
+      {{markdown content.blurb}}
+
+      {{markdown content.credits}}
+
+      <div class="episode-body-info-quote">{{markdown content.quote}}</div>
+    </div>
+  </div>
+</section>

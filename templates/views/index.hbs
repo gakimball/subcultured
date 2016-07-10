@@ -19,21 +19,7 @@
 
 		{{#if data.episodes.length}}
 			{{#each data.episodes}}
-				<section class="episode">
-					<h3 class="episode-title"><a href="#">{{ title }}</a></h3>
-					<div class="episode-body">
-						<div class="episode-body-thumbnail">
-							<img src="{{ image.secure_url }}" alt="Sonic Passion">
-						</div>
-						<div class="episode-body-info">
-							{{markdown content.blurb}}
-
-							{{markdown content.credits}}
-
-							<div class="episode-body-info-quote">{{markdown content.quote}}</div>
-						</div>
-					</div>
-				</section>
+				{{> episode this}}
 			{{/each}}
 		{{else}}
 			<p>No episodes have been published yet.</p>
@@ -45,39 +31,9 @@
 
 	{{!-- Sidebar --}}
 	<div class="main-sidebar">
-		<section>
-			<h2>About</h2>
-			<p>Somewhere on the Internet, a group of writers have produced hundreds of stories about a boring man and his cat. Elsewhere, a devoted <i>Buffy the Vampire Slayer</i> fan maintains a message board with a history of 40,000 posts—all written by her.</p>
+		{{> about}}
 
-			<p>Online summer camps; dwarven kingdoms; elevator enthusiasts; the Internet is a big place. Let us be your guides through the interesting, the eccentric, and occasionally, the pornographic. Subculture is an exploration of niche Internet communities and the human behaviors that drive them.</p>
-
-			<div class="bio">
-				<div class="bio-image">
-					<img src="/images/photo-geoff.png" alt="Geoff Kimball">
-				</div>
-				<div class="bio-text">
-					<p><a href="http://twitter.com/geoffkimball">Geoff Kimball</a> is a product designer and web developer in San Jose, California.</p>
-				</div>
-			</div>
-
-			<div class="bio">
-				<div class="bio-image">
-					<img src="/images/photo-drewb.png" alt="Drew Siner">
-				</div>
-				<div class="bio-text">
-					<p><a href="http://twitter.com/dmsiner">Drew Siner</a> is a video and audio producer in Bloomington, Indiana.</p>
-				</div>
-			</div>
-		</section>
-
-		<section>
-			<h2>Subscribe</h2>
-
-			<a href="" class="link">iTunes</a>
-			<a href="" class="link">Spotify</a>
-			<a href="" class="link">Soundcloud</a>
-			<a href="" class="link">RSS</a>
-		</section>
+		{{> subscribe}}
 	</div>
 	{{!-- /Sidebar --}}
 </div>
