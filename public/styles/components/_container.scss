@@ -8,6 +8,10 @@
   @include breakpoint(large) {
     @include grid-col-size(8);
   }
+
+  &:last-child {
+    width: 100%;
+  }
 }
 
 .main-sidebar {
